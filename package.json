@@ -1,11 +1,12 @@
 {
-  "name": "user-list",
+  "name": "RL-Services",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "dev": "npx nodemon server.js",
     "seed": "node seeds/seed.js"
   },
   "keywords": [],
@@ -14,11 +15,20 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
-    "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
-  }
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.28.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camdenz2k3/RL-Services.git"
+  },
+  "bugs": {
+    "url": "https://github.com/camdenz2k3/RL-Services/issues"
+  },
+  "homepage": "https://github.com/camdenz2k3/RL-Services#readme",
+  "description": ""
 }
