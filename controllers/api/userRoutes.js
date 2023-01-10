@@ -1,5 +1,6 @@
+import express from "express";
 const router = require('express').Router();
-const { User } = require('../../models');
+import { User } from '../../models';
 
 router.post('/login', async (req, res) => {
   try {
@@ -43,4 +44,25 @@ router.post('/logout', (req, res) => {
   }
 });
 
-module.exports = router;
+router.post("/signup", async (req, res) => {
+	try {
+		const userData = await User.findOne({
+			where: { email: req.body.email },
+		});
+		if (userData) {
+			res.status(400).json({ message: "Email already exists" });
+		}
+
+		const newUserData = await User.create(req.body);
+		const newUser = newUserData.get({ plain: true });
+		req.session.save(() => {
+			req.session.user_id = newUser.id;
+			req.session.logged_in = true;
+			res.json({ user: newUser, message: "You are now logged in!" });
+		});
+	} catch (err) {
+		res.status(400).send();
+	}
+});
+
+export default router;
