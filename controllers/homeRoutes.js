@@ -1,6 +1,9 @@
-const router = require('express').Router();
-const { User } = require('../models');
-const withAuth = require('../utils/auth');
+import express from "express";
+const router = express.Router();
+import { User, order, product, service } from "../models";
+import {sequelize} from "sequelize";
+import sequelize from "../config/connection";
+
 
 router.get('/', withAuth, async (req, res) => {
   try {
@@ -29,4 +32,4 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-module.exports = router;
+export default router;

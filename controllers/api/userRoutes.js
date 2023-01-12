@@ -1,5 +1,5 @@
 import express from "express";
-const router = require('express').Router();
+const router = express.Router();
 import { User } from '../../models';
 
 router.post('/login', async (req, res) => {
