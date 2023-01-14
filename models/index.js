@@ -3,7 +3,7 @@ import order from "./order";
 import product from "./product";
 import service from "./service";
 
-User.hasMany(order, {
+user.hasMany(order, {
 
 });
 order.belongsTo(user, {

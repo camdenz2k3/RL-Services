@@ -1,9 +1,9 @@
-import express from "express"
+import express from "express";
 const router = express.Router();
 import userRoutes from "./userRoutes";
 import orderRoutes from "./orderRoutes";
-import productRoutes from "./productRoutes"
-import serviceRoutes from "./serviceRoutes"
+import productRoutes from "./productRoutes";
+import serviceRoutes from "./serviceRoutes";
 
 
 router.use("/users", userRoutes);
