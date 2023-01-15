@@ -2,7 +2,6 @@ import express from "express";
 const router = express.Router();
 import { User, order, product, service } from "../models";
 import {sequelize} from "sequelize";
-import sequelize from "../config/connection";
 
 
 router.get('/', withAuth, async (req, res) => {

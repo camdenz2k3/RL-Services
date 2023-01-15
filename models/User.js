@@ -2,7 +2,7 @@ import { Model, DataTypes } from "sequelize";
 import bcrypt from "bcrypt";
 import sequelize from '../config/connection';
 
-class User extends Model {
+class user extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
@@ -51,4 +51,4 @@ User.init(
   }
 );
 
-export default User;
+export default user;
