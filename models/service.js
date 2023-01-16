@@ -11,7 +11,7 @@ service.init(
             primaryKey: true,
             autoIncrement: true,
           },
-          service_type: {
+        service_type: {
 			type: DataTypes.STRING,
             allowNull: false,
 		},

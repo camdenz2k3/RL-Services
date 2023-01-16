@@ -4,7 +4,7 @@ const router = express.Router();
 import { service } from "../../models"
 
 
-router.("/", async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         const services =await service.findAll();
         if (services.length === 0) {
