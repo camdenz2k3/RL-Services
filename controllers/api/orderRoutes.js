@@ -1,5 +1,18 @@
 import express from "express";
-import { Sequelize } from "sequelize";
 const router = express.Router();
+import { order } from "../../models"
+
+router.post("/", async (req, res) => {
+    try {
+        const neworder =await order.create({
+            user_id
+
+        })
+        res.status(200).json(neworder)
+    } catch (err) {
+		res.status(500).json(err)
+	}
+})
+
 
 export default router;
