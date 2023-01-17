@@ -1,7 +1,7 @@
-import user from "./user";
-import order from "./order";
-import product from "./product";
-import service from "./service";
+import user from "./user.js";
+import order from "./order.js";
+import product from "./product.js";
+import service from "./service.js";
 
 user.hasMany(order, {
     foreignKey: "user_id"

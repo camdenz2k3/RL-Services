@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import { service } from "../../models"
+import { service } from "../../models/index.js"
 
 
 router.put("/", async (req, res) => {

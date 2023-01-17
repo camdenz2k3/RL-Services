@@ -1,8 +1,8 @@
 import { Model, DataTypes } from "sequelize";
-import sequelize from "../config/connection";
-import product from "./product";
-import service from "./service";
-import user from "./user";
+import sequelize from "../config/connection.js";
+import product from "./product.js";
+import service from "./service.js";
+import user from "./user.js";
 
 class order extends Model {}
 

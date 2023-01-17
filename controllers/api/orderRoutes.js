@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import { order } from "../../models"
+import { order } from "../../models/index.js"
 
 router.post("/", async (req, res) => {
     try {

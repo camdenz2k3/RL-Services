@@ -1,9 +1,9 @@
 import express from "express";
 const router = express.Router();
-import userRoutes from "./userRoutes";
-import orderRoutes from "./orderRoutes";
-import productRoutes from "./productRoutes";
-import serviceRoutes from "./serviceRoutes";
+import userRoutes from "./userRoutes.js";
+import orderRoutes from "./orderRoutes.js";
+import productRoutes from "./productRoutes.js";
+import serviceRoutes from "./serviceRoutes.js";
 
 
 router.use("/users", userRoutes);
