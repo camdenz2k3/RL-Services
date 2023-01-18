@@ -22,6 +22,15 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+router.get("/product", async (req, res) => {
+
+
+  res.render("product", {
+    
+  })
+})
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
