@@ -27,6 +27,14 @@ router.get("/product", async (req, res) => {
 
 
   res.render("product", {
+
+  })
+})
+
+router.get("/service", async (req, res) => {
+
+
+  res.render("service", {
     
   })
 })
