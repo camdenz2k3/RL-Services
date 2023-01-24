@@ -15,8 +15,13 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: 'Super secret secret',
-  cookie: {},
+  secret: "anything",
+  cookie: {
+    maxAge: 24*60*60*1000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -25,6 +30,10 @@ const sess = {
 };
 
 app.use(session(sess));
+app.use((req, res, next) => {
+  console.log('DEBUG: req.session', req.session);
+  next();
+});
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
@@ -34,7 +43,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.resolve("./public")));
 
 app.use(routes);
-
+console.log(sess)
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`\n\nServer listening on http://localhost:${PORT}\n`));
 });

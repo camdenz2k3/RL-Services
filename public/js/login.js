@@ -20,19 +20,19 @@ const loginFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.login-form')
+  .querySelector('#login-form')
   .addEventListener('submit', loginFormHandler);
 
   const signupFormHandler = async (event) => {
     event.preventDefault();
-  
+    let alertMessage = "error"
     const name = document.querySelector("#name-signup").value.trim();
     const email = document.querySelector("#email-signup").value.trim();
     const password = document.querySelector("#password-signup").value.trim();
     const confirmPassword = document
       .querySelector("#confirmPassword-signup")
       .value.trim();
-
+    
     if (!confirmPassword || password !== confirmPassword) {
       alertMessage += "Passwords don't match\n";
     }
