@@ -3,10 +3,9 @@ const router = express.Router();
 import { user } from '../../models/index.js';
 
 router.post('/login', async (req, res) => {
- // console.log(req.body)
   try {
     const userData = await user.findOne({ where: { email: req.body.email } });
-   // console.log(userData)
+
     if (!userData) {
       res
         .status(400)
@@ -26,10 +25,10 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
+      
       res.json({ user: userData, message: 'You are now logged in!' });
     });
-   // console.log("-=-=-=-=-=-=-=-")
-   // console.log(req.session.logged_in)
+
   } catch (err) {
     res.status(400).send();
   }
@@ -46,8 +45,6 @@ router.post('/logout', (req, res) => {
 });
 
 router.post("/signup", async (req, res) => {
- // console.log("-==-=-=-==--==-=-=---=--=")
- // console.log(req.body)
 	try {
 		const userData = await user.findOne({
 			where: { email: req.body.email },
