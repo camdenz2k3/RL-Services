@@ -1,10 +1,10 @@
 import express from "express";
 const router = express.Router();
-import { user } from '../../models/index.js';
+import { User } from '../../models/index.js';
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await user.findOne({ where: { email: req.body.email } });
+    const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
@@ -46,14 +46,14 @@ router.post('/logout', (req, res) => {
 
 router.post("/signup", async (req, res) => {
 	try {
-		const userData = await user.findOne({
+		const userData = await User.findOne({
 			where: { email: req.body.email },
 		});
 		if (userData) {
 			res.status(400).json({ message: "Email already exists" });
 		}
 
-		const newUserData = await user.create(req.body);
+		const newUserData = await User.create(req.body);
 		const newUser = newUserData.get({ plain: true });
 		req.session.save(() => {
 			req.session.user_id = newUser.id;

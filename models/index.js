@@ -1,12 +1,12 @@
-import user from "./user.js";
+import User from "./user.js";
 import order from "./order.js";
 import product from "./product.js";
 import service from "./service.js";
 
-user.hasMany(order, {
+User.hasMany(order, {
     foreignKey: "user_id"
 });
-order.belongsTo(user, {
+order.belongsTo(User, {
     foreignKey: "user_id"
 });
 
@@ -24,4 +24,4 @@ service.belongsTo(order, {
     foreignKey: "order_id"
 });
 
-export { user, order, product, service };
+export { User, order, product, service };

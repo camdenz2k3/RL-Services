@@ -2,7 +2,7 @@ import { Model, DataTypes } from "sequelize";
 import sequelize from "../config/connection.js";
 import product from "./product.js";
 import service from "./service.js";
-import user from "./user.js";
+import User from "./user.js";
 
 class order extends Model {}
 
@@ -31,7 +31,7 @@ order.init(
 		user_id: {
 			type: DataTypes.INTEGER,
 			references: {
-				model: user,
+				model: User,
 				key: "id",
 			},
 		},

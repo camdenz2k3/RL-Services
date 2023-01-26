@@ -1,12 +1,12 @@
 import express from "express";
 const router = express.Router();
-import { user, order, product, service } from "../models/index.js";
+import { User, order, product, service } from "../models/index.js";
 
 
 
 router.get('/', async (req, res) => {
   try {
-    const userData = await user.findAll({
+    const userData = await User.findAll({
       attributes: { exclude: ['password'] },
       order: [['name', 'ASC']],
     });
