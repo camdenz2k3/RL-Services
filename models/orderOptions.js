@@ -21,7 +21,7 @@ orderOptions.init(
 		timestamps: false,
 		freezeTableName: true,
 		underscored: true,
-		modelName: "orderoption",
+		modelName: "orderoptions",
 	}
 );
 
