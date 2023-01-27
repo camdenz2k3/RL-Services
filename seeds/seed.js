@@ -1,9 +1,9 @@
 import sequelize from "../config/connection.js";
-import { User, product, service } from "../models/index.js";
+import { User, order, orderOptions } from "../models/index.js";
 
 import userData from "./userData.json" assert {type:"json"};
-import productData from "./productData.json" assert {type:"json"};
-import serviceData from "./serviceData.json" assert {type:"json"};
+import orderData from "./orderData.json" assert {type:"json"};
+import orderOptionsData from "./orderOptionsData.json" assert {type:"json"};
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -13,12 +13,12 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const productSeedData = await product.bulkCreate(productData, {
+  const orderSeedData = await order.bulkCreate(orderData, {
     individualHooks: true,
     returning: true,
   });
 
-  const serviceSeedData = await service.bulkCreate(serviceData, {
+  const orderOptionSeedData = await orderOptions.bulkCreate(orderOptionsData, {
     individualHooks: true,
     returning: true,
   });

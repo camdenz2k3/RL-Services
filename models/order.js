@@ -19,7 +19,7 @@ order.init(
 				key: "name",
 			},
 		},
-        orderoption_id: {
+        orderoptions_id: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			references: {
