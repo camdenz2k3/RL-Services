@@ -1,0 +1,23 @@
+[
+    {
+        "order_option": "snowplow"
+    },
+    {
+        "order_option": "lawnmowing"
+    },
+    {
+        "order_option": "mulching"
+    },
+    {
+        "order_option": "treecutting"
+    },
+    {
+        "order_option": "bugspraying"
+    },
+    {
+        "order_option": "firewood"
+    },
+    {
+        "order_option": "mulch"
+    }
+]

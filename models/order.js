@@ -1,8 +1,5 @@
 import { Model, DataTypes } from "sequelize";
 import sequelize from "../config/connection.js";
-import product from "./product.js";
-import service from "./service.js";
-import User from "./user.js";
 
 class order extends Model {}
 
@@ -14,31 +11,26 @@ order.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        product_id: {
-			type: DataTypes.INTEGER,
+		user_name: {
+			type: DataTypes.STRING,
+			allowNull: false,
 			references: {
-				model: product,
-				key: "id",
+				model: "user",
+				key: "name",
 			},
 		},
-        service_id: {
+        orderoption_id: {
 			type: DataTypes.INTEGER,
+			allowNull: false,
 			references: {
-				model: service,
-				key: "id",
-			},
-		},
-		user_id: {
-			type: DataTypes.INTEGER,
-			references: {
-				model: User,
+				model: "orderoption",
 				key: "id",
 			},
 		},
     },
     {
 		sequelize,
-		timestamps: true,
+		timestamps: false,
 		freezeTableName: true,
 		underscored: true,
 		modelName: "order",

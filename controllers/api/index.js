@@ -2,13 +2,11 @@ import express from "express";
 const router = express.Router();
 import userRoutes from "./userRoutes.js";
 import orderRoutes from "./orderRoutes.js";
-import productRoutes from "./productRoutes.js";
-import serviceRoutes from "./serviceRoutes.js";
+import orderoptionsRoutes from "./orderoptionstRoutes.js";
 
 
 router.use("/users", userRoutes);
 router.use("/order", orderRoutes);
-router.use("/product", productRoutes);
-router.use("/service", serviceRoutes);
+router.use("/orderoptions", orderoptionsRoutes);
 
 export default router;
