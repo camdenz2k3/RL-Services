@@ -32,15 +32,28 @@ document
     const confirmPassword = document
       .querySelector("#confirmPassword-signup")
       .value.trim();
+    let alertMessage = "";
 
+    if (!name) {
+      alertMessage += "Missing name\n";
+    }
+    if (!email) {
+      alertMessage += "Missing email\n";
+    }
+    if (!password) {
+      alertMessage += "Missing password\n";
+    }
+    if (password.length < 8) {
+      alertMessage += "Password is smaller than 8 characters\n";
+    }
     if (!confirmPassword || password !== confirmPassword) {
       alertMessage += "Passwords don't match\n";
     }
   
     if (alertMessage.length !== 0) {
       alert(alertMessage);
-    } else {
-        const response = await fetch("/api/users/signup", {
+    } else  if (name && email && password){
+        const response = await fetch("/api/users", {
           method: "POST",
           body: JSON.stringify({ name, email, password }),
           headers: { "Content-Type": "application/json" },
@@ -55,6 +68,6 @@ document
   };
   
   document
-    .querySelector("#signup-form")
+    .querySelector(".signup-form")
     .addEventListener("submit", signupFormHandler);
   

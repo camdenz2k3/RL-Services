@@ -6,7 +6,7 @@ const logout = async (event) => {
   });
 
   if (response.ok) {
-    window.location.href = "/";
+    window.location.href = "/login";
   } else {
     alert(response.statusText);
   }
