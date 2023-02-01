@@ -3,10 +3,10 @@ import order from "./order.js";
 import orderOptions from "./orderOptions.js";
 
 User.hasMany(order, {
-    foreignKey: "user_name"
+    foreignKey: "user_id"
 });
 order.belongsTo(User, {
-    foreignKey: "user_name"
+    foreignKey: "user_id"
 });
 
 order.hasMany(orderOptions, {
