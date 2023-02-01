@@ -27,13 +27,18 @@ order.init(
 				key: "id",
 			},
 		},
+		user_id: {
+			type: DataTypes.INTEGER,
+      		allowNull: false,
+      		primaryKey: true,
+		}
     },
     {
 		sequelize,
 		timestamps: false,
 		freezeTableName: true,
 		underscored: true,
-		modelName: "order",
+		modelName: "orders",
 	}
 );
 
