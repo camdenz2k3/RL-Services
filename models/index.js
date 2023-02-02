@@ -3,17 +3,18 @@ import order from "./order.js";
 import orderOptions from "./orderOptions.js";
 
 User.hasMany(order, {
-    foreignKey: "user_id"
+    foreignKey: "user_id",
+    onDelete: "CASCADE"
 });
 order.belongsTo(User, {
     foreignKey: "user_id"
 });
 
-order.hasMany(orderOptions, {
-    foreignKey: "order_id"    
+orderOptions.hasMany(order, {
+    foreignKey: "orderoptions_id"    
 });
-orderOptions.belongsTo(order, {
-    foreignKey: "order_id"
+order.belongsTo(orderOptions, {
+    foreignKey: "orderoptions_id"
 });
 
 export { User, order, orderOptions };

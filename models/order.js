@@ -30,7 +30,6 @@ order.init(
 		user_id: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
-			primaryKey: true,
 			references: {
 				model: 'user',
 				key: 'id',
