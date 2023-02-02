@@ -20,7 +20,7 @@ order.init(
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			references: {
-				model: orderOptions,
+				model: "orderoptions",
 				key: "id",
 			},
 		},
@@ -28,7 +28,7 @@ order.init(
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			references: {
-				model: User,
+				model: "user",
 				key: "id",
 		  	},
 		}

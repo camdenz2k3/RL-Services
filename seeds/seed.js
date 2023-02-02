@@ -13,12 +13,12 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const orderSeedData = await order.bulkCreate(orderData, {
+  const orderOptionSeedData = await orderOptions.bulkCreate(orderOptionsData, {
     individualHooks: true,
     returning: true,
   });
 
-  const orderOptionSeedData = await orderOptions.bulkCreate(orderOptionsData, {
+  const orderSeedData = await order.bulkCreate(orderData, {
     individualHooks: true,
     returning: true,
   });
