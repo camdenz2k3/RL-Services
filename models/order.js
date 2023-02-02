@@ -1,6 +1,7 @@
 import { Model, DataTypes } from "sequelize";
 import sequelize from "../config/connection.js";
-
+import User from "./User.js";
+import orderOptions from "./orderOptions.js";
 class order extends Model {}
 
 order.init(
@@ -11,19 +12,15 @@ order.init(
             primaryKey: true,
             autoIncrement: true,
         },
-		user_name: {
+		name: {
 			type: DataTypes.STRING,
 			allowNull: false,
-			references: {
-				model: "user",
-				key: "name",
-			},
 		},
         orderoptions_id: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			references: {
-				model: "orderoptions",
+				model: orderOptions,
 				key: "id",
 			},
 		},
@@ -31,8 +28,8 @@ order.init(
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			references: {
-				model: 'user',
-				key: 'id',
+				model: User,
+				key: "id",
 		  	},
 		}
     },

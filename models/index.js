@@ -1,4 +1,4 @@
-import User from "./user.js";
+import User from "./User.js";
 import order from "./order.js";
 import orderOptions from "./orderOptions.js";
 
