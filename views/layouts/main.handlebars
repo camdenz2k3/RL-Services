@@ -36,6 +36,11 @@
 						<a class="nav-link mx-2" aria-current="page" href="/createorder">Create Order</a>
 					</li>
 					{{/if}}
+					{{#if logged_in}}
+					<li class="nav-item">
+						<a class="nav-link mx-2" aria-current="page" href="/vieworders">View Orders</a>
+					</li>
+					{{/if}}
 					<li class="nav-item">
 						{{#if logged_in}}
 						<a class="nav-link mx-2" href="/logout" id="logout">Log out</a>

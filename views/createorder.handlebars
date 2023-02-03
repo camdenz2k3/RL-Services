@@ -1,30 +1,29 @@
-<header>
-  <a id="vieworders" href="/views/vieworders.handlebars">View All Orders</a>
-</header>
-
 <div id="createNewOrder" class="card">
   <form id="createNewOrder" class="form post-form">
       <h1>Create and Submit order</h1>
-    <label for="snowplow" class="form-label"> snowplow</label>
-    <input class="form-control" type="checkbox" id="optionSelections" name="snowplow" value="snowplow">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" id="name" name="name" placeholder="First Name" />
     <br>
-    <label for="lawnmowing" class="form-label"> lawnmowing</label>
-    <input class="form-control" type="checkbox" id="optionSelections" name="lawnmowing" value="lawnmowing">
+    <label for="snowplow" class="form-label"> Snow Plow</label>
+    <input type="checkbox" id="optionSelections" name="snowplow" value="snowplow" />
     <br>
-    <label for="mulching" class="form-label"> mulching</label>
-    <input class="form-control" type="checkbox" id="optionSelections" name="mulching" value="mulching">
+    <label for="lawnmowing" class="form-label"> Lawn Mowing</label>
+    <input type="checkbox" id="optionSelections" name="lawnmowing" value="lawnmowing" />
     <br>
-    <label for="snowplow" class="form-label"> Treecutting</label>
-    <input class="form-control" type="checkbox" id="optionSelections" name="treecutting" value="treecutting">
+    <label for="mulching" class="form-label"> Mulching</label>
+    <input type="checkbox" id="optionSelections" name="mulching" value="mulching" />
     <br>
-    <label for="bugspraying" class="form-label"> bugspraying</label>
-    <input class="form-control" type="checkbox" id="optionSelections" name="bugspraying" value="bugspraying">
+    <label for="snowplow" class="form-label"> Tree Cutting</label>
+    <input type="checkbox" id="optionSelections" name="treecutting" value="treecutting" />
+    <br>
+    <label for="bugspraying" class="form-label"> Bug Spraying</label>
+    <input type="checkbox" id="optionSelections" name="bugspraying" value="bugspraying" />
     <br>
     <label for="firewood" class="form-label">Firewood:</label>
-    <input class="form-control" type="text" id="optionSelections" name="firewood" placeholder="quantity of cords">
+    <input type="text" id="optionSelections" name="firewood" placeholder="quantity of cords" />
     <br>
     <label for="mulch" class="form-label">Mulch</label>
-    <input class="form-control" type="text" id="optionSelections" name="mulch" placeholder="quantity in cubic yards">
+    <input type="text" id="optionSelections" name="mulch" placeholder="quantity in cubic yards" />
     <br><br>
     <input type="submit" value="Submit">
   </form>

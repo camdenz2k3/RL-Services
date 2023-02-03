@@ -56,6 +56,23 @@ router.get("/createorder", async (req, res) => {
   }
 });
 
+router.get("/vieworders", async (req, res) => {
+  try {
+    let user = await User.findOne({
+      where: {
+        id: req.session.user_id
+      }
+    })
+    user = user.get({ plain: true })
+    
+  res.render("vieworders", {
+    logged_in: req.session.logged_in,
+  });
+} catch (err) {
+  res.status(500).json(err);
+}
+});
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
