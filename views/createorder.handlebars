@@ -1,33 +1,33 @@
 <div id="createNewOrder" class="card">
-  <form id="createNewOrder" class="form post-form">
+  <form id="createNewOrder" class="form post-form" method="get">
       <h1>Create and Submit order</h1>
-    <label for="name" class="form-label">Name</label>
-    <input type="text" id="name" name="name" placeholder="First Name" />
+    <label for="nameFirst" class="form-label">Name</label>
+    <input type="text" id="nameFirst" name="nameFirst" placeholder="First Name" />
     <br>
     <label for="snowplow" class="form-label"> Snow Plow</label>
-    <input type="checkbox" id="optionSelections" name="snowplow" value="snowplow" />
+    <input type="checkbox" id="optionSelection1" name="snowplow" value="snowplow" />
     <br>
     <label for="lawnmowing" class="form-label"> Lawn Mowing</label>
-    <input type="checkbox" id="optionSelections" name="lawnmowing" value="lawnmowing" />
+    <input type="checkbox" id="optionSelection2" name="lawnmowing" value="lawnmowing" />
     <br>
     <label for="mulching" class="form-label"> Mulching</label>
-    <input type="checkbox" id="optionSelections" name="mulching" value="mulching" />
+    <input type="checkbox" id="optionSelection3" name="mulching" value="mulching" />
     <br>
     <label for="snowplow" class="form-label"> Tree Cutting</label>
-    <input type="checkbox" id="optionSelections" name="treecutting" value="treecutting" />
+    <input type="checkbox" id="optionSelection4" name="treecutting" value="treecutting" />
     <br>
     <label for="bugspraying" class="form-label"> Bug Spraying</label>
-    <input type="checkbox" id="optionSelections" name="bugspraying" value="bugspraying" />
+    <input type="checkbox" id="optionSelection5" name="bugspraying" value="bugspraying" />
     <br>
     <label for="firewood" class="form-label">Firewood:</label>
-    <input type="text" id="optionSelections" name="firewood" placeholder="quantity of cords" />
+    <input class="form-control" type="text" id="optionSelections" name="firewood" placeholder="quantity of cords" />
     <br>
     <label for="mulch" class="form-label">Mulch</label>
-    <input type="text" id="optionSelections" name="mulch" placeholder="quantity in cubic yards" />
+    <input class="form-control" type="text" id="optionSelections" name="mulch" placeholder="quantity in cubic yards" />
     <br><br>
     <input type="submit" value="Submit">
   </form>
 </div>
+<h4 style="color:green" id="result"></h4>
 
-
-<script src="/public/js/create.js"></script>
+<script src="/js/create.js"></script>
