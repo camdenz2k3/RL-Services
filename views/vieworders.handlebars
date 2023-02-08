@@ -2,44 +2,17 @@
     <h2>All Orders</h2>
         <table class="table">
                 <tr>
-                    <th>#Id</th>
+                    <th>Number</th>
                     <th>Name</th>
-                    <th>Email</th>
                     <th>Items Ordered</th>
                 </tr>
 
                 <tr>
-                    <th>{{this.order.id}}</th>
+                    <th>{{this.orderinfo.id}} </th>
                     <td>{{this.name}}</td>
-                    <td>{{this.user.email}}</td>
-                    <td>{{this.order}}.</td>
+                    <td>{{this.orderOptions_id}}</td>
                 </tr>
         </table>
 
  </section>
-{{!-- 
-<div class="card text-light myOrdersTable">
-    <div class="p-2 "
 
- <html>
-<head>
-<script>
-
-    // Called on body's `onload` event
-    function init() {
-        // Retrieving the text input's value which was stored into localStorage
-        var mytext = localStorage.getItem("mytext");
-
-        // Writing the value in the document
-        document.write("passed value = "+mytext);
-    }
-
-</script>
-</head>    
-
-<body onload="init();">
-
-</body>
-
-</html>
- --}}

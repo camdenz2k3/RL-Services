@@ -2,19 +2,20 @@ const createNewOrder = document.getElementById('createNewOrder')
 
 // createNewOrder.addEventListener('submit', (event) => {
 const handleSubmit = (event) => {
+  console.log(event.target)
   event.preventDefault()
 
   const {
     nameFirst: nameFirstInput,
     
-    optionSelections: optionSelectionsInput,
+    optionPick: optionPickInput,
   } = event.target.elements
 
   const newOrder = {
     name: nameFirstInput.value,
-    order: optionSelectionsInput.value
+    orderOptions_id: optionPickInput.value
   }
-
+console.log(newOrder)
   fetch('/api/order', {
     method: 'POST',
     headers: {

@@ -1,5 +1,5 @@
 import sequelize from "../config/connection.js";
-import { User, order, orderOptions } from "../models/index.js";
+import { User, orderInfo, orderOptions } from "../models/index.js";
 
 import userData from "./userData.json" assert {type:"json"};
 import orderData from "./orderData.json" assert {type:"json"};
@@ -18,7 +18,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const orderSeedData = await order.bulkCreate(orderData, {
+  const orderSeedData = await orderInfo.bulkCreate(orderData, {
     individualHooks: true,
     returning: true,
   });

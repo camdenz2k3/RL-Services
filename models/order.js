@@ -2,9 +2,9 @@ import { Model, DataTypes } from "sequelize";
 import sequelize from "../config/connection.js";
 import User from "./User.js";
 import orderOptions from "./orderOptions.js";
-class order extends Model {}
+class orderInfo extends Model {}
 
-order.init(
+orderInfo.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -38,8 +38,8 @@ order.init(
 		timestamps: false,
 		freezeTableName: true,
 		underscored: true,
-		modelName: "order",
+		modelName: "orderinfo",
 	}
 );
 
-export default order;
+export default orderInfo;

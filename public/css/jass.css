@@ -945,9 +945,20 @@ a:hover {
 }
 
 .bg-link {
+  background-image: url(https://www.northeastnursery.com/web_images/stock1.jpg);
   background-color: #1b89bc !important;
+  height:600px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */ 
+  font-weight: bold;
+  color:#245ce9;
 }
-
+.bg-link h2 {
+  width:100px ;
+  text-align: center;
+  width: fit-content;
+}
 /* DISPLAY */
 .display-none {
   display: none !important;
