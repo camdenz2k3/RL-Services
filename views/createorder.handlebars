@@ -1,22 +1,23 @@
 <div class="card">
   <form id="createOrder" class="form post-form">
       <h1>Create and Submit order</h1>
+      <div id="form-group">
     <label for="nameFirst" class="form-label">Name</label>
     <input type="text" class="form-control" id="nameFirst" name="nameFirst" placeholder="First Name" />
     <br>
-    <label for="snowplow" class="form-label"> Snow Plow</label>
-    <input type="checkbox" id="optionPick" name="snowplow" value="1" />
+    <label for="optionPick" class="form-label"> Snow Plow</label>
+    <input type="checkbox" id="optionPick" name="orderPick" value="1" />
     <br>
-    <label for="lawnmowing" class="form-label"> Lawn Mowing</label>
+    <label for="optionPick" class="form-label"> Lawn Mowing</label>
     <input type="checkbox" id="optionPick" name="lawnmowing" value="2" />
     <br>
-    <label for="mulching" class="form-label"> Mulching</label>
+    <label for="optionPick" class="form-label"> Mulching</label>
     <input type="checkbox" id="optionPick" name="mulching" value="3" />
     <br>
-    <label for="snowplow" class="form-label"> Tree Cutting</label>
+    <label for="optionPick" class="form-label"> Tree Cutting</label>
     <input type="checkbox" id="optionPick" name="treecutting" value="4" />
     <br>
-    <label for="bugspraying" class="form-label"> Bug Spraying</label>
+    <label for="optionPick" class="form-label"> Bug Spraying</label>
     <input type="checkbox" id="optionPick" name="bugspraying" value="5" />
     <br>
     <label for="firewood" class="form-label">Firewood:</label>
@@ -27,6 +28,7 @@
     <br><br>
     <input type="submit" value="Submit">
   </form>
+  </div>
 </div>
 <h4 style="color:green" id="result"></h4>
 

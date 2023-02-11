@@ -12,7 +12,7 @@ createOrder.addEventListener('submit', (event) => {
 
   const orderData = {
     name: nameFirstInput.value,
-    orderOptions_id: optionPickInput.value
+    orderoptions_id: optionPickInput.value
   }
 console.log(orderData)
   fetch('/api/orders', {
