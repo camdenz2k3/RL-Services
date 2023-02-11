@@ -6,12 +6,13 @@
                     <th>Name</th>
                     <th>Items Ordered</th>
                 </tr>
-
+            {{#each orders}}
                 <tr>
-                    <th>{{this.orderinfo.id}} </th>
-                    <td>{{this.name}}</td>
-                    <td>{{this.orderOptions_id}}</td>
+                    <th>{{id}} </th>
+                    <td>{{name}}</td>
+                    <td>{{orderOptions_id}}</td>
                 </tr>
+            {{/each}}
         </table>
 
  </section>

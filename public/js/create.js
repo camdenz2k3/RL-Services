@@ -1,7 +1,6 @@
-const createNewOrder = document.getElementById('createNewOrder')
+const createOrder = document.getElementById('createOrder')
 
-// createNewOrder.addEventListener('submit', (event) => {
-const handleSubmit = (event) => {
+createOrder.addEventListener('submit', (event) => {
   console.log(event.target)
   event.preventDefault()
 
@@ -11,17 +10,17 @@ const handleSubmit = (event) => {
     optionPick: optionPickInput,
   } = event.target.elements
 
-  const newOrder = {
+  const orderData = {
     name: nameFirstInput.value,
     orderOptions_id: optionPickInput.value
   }
-console.log(newOrder)
-  fetch('/api/order', {
+console.log(orderData)
+  fetch('/api/orders', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(newOrder)
+    body: JSON.stringify(orderData)
   })
   .then(response => {
     if (response.ok) {
@@ -29,7 +28,4 @@ console.log(newOrder)
     }
   })
   .catch(err => console.log(err))
-
-}
-
-createNewOrder.addEventListener('submit', handleSubmit)
+})

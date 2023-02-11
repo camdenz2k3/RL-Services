@@ -6,7 +6,7 @@ import orderoptionsRoutes from "./orderoptionstRoutes.js";
 
 
 router.use("/users", userRoutes);
-router.use("/order", orderRoutes);
+router.use("/orders", orderRoutes);
 router.use("/orderoptions", orderoptionsRoutes);
 
 export default router;

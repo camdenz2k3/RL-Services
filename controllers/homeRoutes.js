@@ -58,20 +58,39 @@ router.get("/createorder", async (req, res) => {
 
 router.get("/vieworders", async (req, res) => {
   try {
-    let user = await User.findOne({
-      where: {
-        id: req.session.user_id
-      }
+    let orders = await orderInfo.findAll({
+      include: User
     })
-    user = user.get({ plain: true })
+    orders = orders.map(orderinfo => orderinfo.get({ plain: true }))
     
   res.render("vieworders", {
+    orders,
     logged_in: req.session.logged_in,
   });
 } catch (err) {
   res.status(500).json(err);
 }
 });
+
+// router.get('/orderinfo/:id', async (req, res) => {
+//   try {
+//       let orderinfo = await orderInfo.findOne({
+//           where: {
+//               id: req.params.id
+//           },
+//           include: [User]
+//       })
+//       orderinfo = orderinfo.get({plain: true})
+      
+//       res.render('vieworder', {
+//           blog,
+//           comments,
+//           logged_in: req.session.logged_in
+//       })
+//   } catch(err) {
+//       res.status(500).json(err)
+//   }
+// })
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {

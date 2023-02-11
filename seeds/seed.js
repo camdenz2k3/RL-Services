@@ -18,10 +18,12 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const orderSeedData = await orderInfo.bulkCreate(orderData, {
-    individualHooks: true,
-    returning: true,
-  });
+  for (const orderinfo of orderData) {
+    await orderInfo.create({
+      ...orderinfo,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    })
+  }
 
   process.exit(0);
 };
