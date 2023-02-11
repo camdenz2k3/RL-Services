@@ -5,7 +5,7 @@ const handleSubmit = (event) => {
   event.preventDefault()
 
   const {
-    nameFirst: nameFirstInput,
+    // nameFirst: nameFirstInput,
     
     orderOption1: orderOption1Input,
     orderOption2: orderOption2Input,
@@ -17,7 +17,7 @@ const handleSubmit = (event) => {
   } = event.target.elements
 
   const orderData = {
-    name: nameFirstInput.value,
+    // name: nameFirstInput.value,
     orderoptions1_id: orderOption1Input.value,
     orderoptions2_id: orderOption2Input.value,
     orderoptions3_id: orderOption3Input.value,

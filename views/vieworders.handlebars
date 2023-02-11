@@ -1,15 +1,18 @@
  <section id="vieworders">
     <h2>All Orders</h2>
-        <table class="table">
+        <table class="table table-striped">
+            <thead class="thead-dark">
                 <tr>
-                    <th>Number</th>
-                    <th>Name</th>
-                    <th>Items Ordered</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Ordered Services and Items</th>
                 </tr>
-            {{#each orders}}
+            </thead>
+            <tbody>
+                            {{#each orders}}
                 <tr>
-                    <td>{{id}} </td>
-                    <td>{{name}}</td>
+                    <th scope="row">{{id}} </th>
+                    <td>{{user.name}}</td>
                     <td>{{#if orderoptions1_id}}
                     Snow Plow Visits: {{orderoptions1_id }}  
                     {{/if}}
@@ -17,22 +20,23 @@
                     Lawn Mowing Visits: {{orderoptions2_id }}  
                     {{/if}}
                     {{#if orderoptions3_id}}
-                    Mulching Visits: {{orderoptions3_id }}  
+                    Number of Cubic Yards to Mulch: {{orderoptions3_id }}  
                     {{/if}}
                     {{#if orderoptions4_id}}
-                    Treecutting Visits: {{orderoptions4_id }}  
+                    Number of Trees to cut: {{orderoptions4_id }}  
                     {{/if}}
                     {{#if orderoptions5_id}}
                     Bug Spraying Visits: {{orderoptions5_id }}  
                     {{/if}}
                     {{#if orderoptions6_id}}
-                    Firewood quantity: {{orderoptions6_id }}  
+                    Firewood cords quantity: {{orderoptions6_id }}   
                     {{/if}}
                     {{#if orderoptions7_id}}
-                    Mulch quantity: {{orderoptions7_id}}
+                    Mulch quantity: {{orderoptions7_id}} Cubic Yards
                     {{/if}}</td>
                 </tr>
-            {{/each}}
+                {{/each}}
+            </tbody>
         </table>
 
  </section>
