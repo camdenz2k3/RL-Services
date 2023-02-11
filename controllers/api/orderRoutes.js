@@ -4,12 +4,11 @@ import { orderInfo, User, orderOptions } from "../../models/index.js"
 
 router.post("/", async (req, res) => {
     try {
-        const createOrder =await orderInfo.create({
-            name: req.body.name,
-            orderoptions_id: 1,
+        const orderinfo =await orderInfo.create({
+            ...req.body,
             user_id: req.session.user_id
         })
-        res.status(200).json(createOrder)
+        res.status(200).json(orderinfo)
     } catch (err) {
 		res.status(400).json(err)
 	}

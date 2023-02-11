@@ -1,30 +1,37 @@
+<style>
+  .form-control {
+    width:30%
+  }
+</style>
 <div class="card">
   <form id="createOrder" class="form post-form">
+      <div class="card-header navbar-dark bg-dark d-flex justify-content-between align-items-center">
       <h1>Create and Submit order</h1>
-      <div id="form-group">
-    <label for="nameFirst" class="form-label">Name</label>
+      </div>
+          <div class="card-body bg-info bg-opacity-50 text-dark w-100 m-auto p-auto border border-dark border-top-0 border-4 rounded-bottom">
+    <label for="nameFirst" class="form-label">Name:</label>
     <input type="text" class="form-control" id="nameFirst" name="nameFirst" placeholder="First Name" />
     <br>
-    <label for="optionPick" class="form-label"> Snow Plow</label>
-    <input type="checkbox" id="optionPick" name="orderPick" value="1" />
+    <label for="snowplow" class="form-label"> Snow Plow:</label>
+    <input type="text" class="form-control" id="orderOption1" name="snowplow" placeholder="number of visits"/>
     <br>
-    <label for="optionPick" class="form-label"> Lawn Mowing</label>
-    <input type="checkbox" id="optionPick" name="lawnmowing" value="2" />
+    <label for="lawnmowing" class="form-label"> Lawn Mowing:</label>
+    <input type="text" class="form-control" id="orderOption2" name="lawnmowing" placeholder="number of visits"/>
     <br>
-    <label for="optionPick" class="form-label"> Mulching</label>
-    <input type="checkbox" id="optionPick" name="mulching" value="3" />
+    <label for="mulching" class="form-label"> Mulching:</label>
+    <input type="text" class="form-control" id="orderOption3" name="mulching" placeholder="number of visits"/>
     <br>
-    <label for="optionPick" class="form-label"> Tree Cutting</label>
-    <input type="checkbox" id="optionPick" name="treecutting" value="4" />
+    <label for="treecutting" class="form-label"> Tree Cutting:</label>
+    <input type="text" class="form-control" id="orderOption4" name="treecutting" placeholder="number of visits"/>
     <br>
-    <label for="optionPick" class="form-label"> Bug Spraying</label>
-    <input type="checkbox" id="optionPick" name="bugspraying" value="5" />
+    <label for="bugspraying" class="form-label"> Bug Spraying:</label>
+    <input type="text" class="form-control" id="orderOption5" name="bugspraying" placeholder="number of visits" />
     <br>
     <label for="firewood" class="form-label">Firewood:</label>
-    <input class="form-control" type="text" id="optionSelections" name="firewood" placeholder="quantity of cords" />
+    <input class="form" class="form-control" type="text" id="orderOption6" name="firewood" placeholder="quantity of cords" />
     <br>
-    <label for="mulch" class="form-label">Mulch</label>
-    <input class="form-control" type="text" id="optionSelections" name="mulch" placeholder="quantity in cubic yards" />
+    <label for="mulch" class="form-label">Mulch:</label>
+    <input class="form" class="form-control" type="text" id="orderOption7" name="mulch" placeholder="quantity in cubic yards" />
     <br><br>
     <input type="submit" value="Submit">
   </form>

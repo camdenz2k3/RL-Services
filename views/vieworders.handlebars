@@ -8,9 +8,29 @@
                 </tr>
             {{#each orders}}
                 <tr>
-                    <th>{{id}} </th>
+                    <td>{{id}} </td>
                     <td>{{name}}</td>
-                    <td>{{orderoptions_id}}</td>
+                    <td>{{#if orderoptions1_id}}
+                    Snow Plow Visits: {{orderoptions1_id }}  
+                    {{/if}}
+                    {{#if orderoptions2_id}}
+                    Lawn Mowing Visits: {{orderoptions2_id }}  
+                    {{/if}}
+                    {{#if orderoptions3_id}}
+                    Mulching Visits: {{orderoptions3_id }}  
+                    {{/if}}
+                    {{#if orderoptions4_id}}
+                    Treecutting Visits: {{orderoptions4_id }}  
+                    {{/if}}
+                    {{#if orderoptions5_id}}
+                    Bug Spraying Visits: {{orderoptions5_id }}  
+                    {{/if}}
+                    {{#if orderoptions6_id}}
+                    Firewood quantity: {{orderoptions6_id }}  
+                    {{/if}}
+                    {{#if orderoptions7_id}}
+                    Mulch quantity: {{orderoptions7_id}}
+                    {{/if}}</td>
                 </tr>
             {{/each}}
         </table>

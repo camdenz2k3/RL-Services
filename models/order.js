@@ -16,13 +16,33 @@ orderInfo.init(
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-        orderoptions_id: {
-			type: DataTypes.INTEGER,
-			allowNull: false,
-			references: {
-				model: "orderoptions",
-				key: "id",
-			},
+        // orderoptions_id: {
+		// 	type: DataTypes.INTEGER,
+		// 	references: {
+		// 		model: "orderoptions",
+		// 		key: "id",
+		// 	},
+		// },
+		orderoptions1_id: {
+			type: DataTypes.STRING,
+		},
+		orderoptions2_id: {
+			type: DataTypes.STRING,
+		},
+		orderoptions3_id: {
+			type: DataTypes.STRING,
+		},
+		orderoptions4_id: {
+			type: DataTypes.STRING,
+		},
+		orderoptions5_id: {
+			type: DataTypes.STRING,
+		},
+		orderoptions6_id: {
+			type: DataTypes.STRING,
+		},
+		orderoptions7_id: {
+			type: DataTypes.STRING,
 		},
 		user_id: {
 			type: DataTypes.INTEGER,

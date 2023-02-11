@@ -952,10 +952,12 @@ a:hover {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size:cover; /* Resize the background image to cover the entire container */ 
   font-weight: bold;
-  color:#245ce9;
+  color:#000000;
+  
 }
 .bg-link h2 {
   width:100px ;
+  line-height: 1.328; ;
   text-align: center;
   width: fit-content;
 }
