@@ -11,15 +11,15 @@ SO that I can advertise and close purchases easier
 
 ## images
 Home page view
-![homepage](images/homepage.png)
+![homepage](public/images/homepage.png)
 Products advertised page
-![productspage](images/productspage.png)
+![productspage](public/images/productspage.png)
 Services advertised page
-![services](images/services.png)
+![services](public/images/services.png)
 Create order form
-![orderform](images/orderform.png)
+![orderform](public/images/orderform.png)
 View for all orders
-![vieworder](images/vieworder.png)
+![vieworder](public/images/vieworder.png)
 
 ## Deployed link
 https://rlservices.herokuapp.com/
