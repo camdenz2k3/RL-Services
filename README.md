@@ -7,7 +7,7 @@ The inspiration for this project was from a cousin who would like me to build a 
 ## User story
 ```
 AS a seller
-I want people to be able to order my products and services online
+I WANT people to be able to order my products and services online
 SO THAT I can advertise and close purchases easier
 ```
 ## images
