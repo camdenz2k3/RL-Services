@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import apiRoutes from "./api/index.js";
+// import apiRoutes from "./api/index.js";
 import homeRoutes from "./homeRoutes.js";
 
 router.use("/", homeRoutes);
