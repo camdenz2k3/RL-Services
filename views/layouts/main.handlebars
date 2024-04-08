@@ -29,26 +29,6 @@
 					<li class="nav-item">
 						<a class="nav-link mx-2" aria-current="page" href="/product" id="productBtn">Products</a>
 					</li>
-          			<li class="nav-item">
-						<a class="nav-link mx-2" aria-current="page" href="/service" id="serviceBtn">Services</a>
-					</li>
-					{{#if logged_in}}
-					<li class="nav-item">
-						<a class="nav-link mx-2" aria-current="page" href="/createorder">Create Order</a>
-					</li>
-					{{/if}}
-					{{#if logged_in}}
-					<li class="nav-item">
-						<a class="nav-link mx-2" aria-current="page" href="/vieworders">View Orders</a>
-					</li>
-					{{/if}}
-					<li class="nav-item">
-						{{#if logged_in}}
-						<a class="nav-link mx-2" href="/logout" id="logout">Log out</a>
-						{{else}}
-						<a class="nav-link mx-2" href="/login">Log in</a>
-						{{/if}}
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -60,9 +40,6 @@
       
   </footer>
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
   <script src="js/gsap.min.js"></script>
 </body>
 
