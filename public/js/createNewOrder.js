@@ -1,5 +1,5 @@
-const createNewOrder = document.getElementById('createNewOrder')
+// const createNewOrder = document.getElementById('createNewOrder')
 
-createNewOrder.addEventListener('click', (event) => {
-  window.location.href = '/createorder'
-})
+// createNewOrder.addEventListener('click', (event) => {
+//   window.location.href = '/createorder'
+// })
