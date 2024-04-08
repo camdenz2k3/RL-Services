@@ -1,0 +1,82 @@
+ {{!-- <style>
+    .table {
+    margin-left: 7%;
+    margin-right: 7%;
+    width:86%;
+    background-color: white;
+    border-width: 1cm;
+    border-collapse: separate;
+    }
+    .table thead th {
+        font-size: 1.5rem;
+    }
+    .table td {
+        font-size: 1.2rem;
+    }
+    .table tbody th {
+        font-size: 1.32rem;
+    }
+    .main {
+
+    }
+    .container {
+        width: 100%;
+        max-width: 2500px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .container.container-fluid {
+        width: 100%;
+    }
+ </style>
+ 
+ <body class="bg-info">
+    </br>
+    <div class="text-center">
+    <h1>All Orders</h1>
+    </div>
+    </br>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr height="70px">
+                    <th scope="col" width="12%">Number</th>
+                    <th scope="col" width="12%">Name</th>
+                    <th scope="col" width="62%">Ordered Services and Items</th>
+                </tr>
+            </thead>
+            <tbody>
+               {{#each orders}}
+                {{!-- <tr> --}}
+                    {{!-- {{!-- <th scope="row">{{id}} </th>  --}}
+                    {{!-- {{!-- <td>{{user.name}}</td>  --}}
+                    {{!-- <td>{{#if orderoptions1_id}} 
+                    {{!-- Snow Plow Visits: {{orderoptions1_id }} 
+                    {{!-- {{/if}} 
+                    {{!-- {{#if orderoptions2_id}} 
+                    {{!-- Lawn Mowing Visits: {{orderoptions2_id }}   
+                    {{!-- {{/if}} 
+                    {{!-- {{#if orderoptions3_id}} 
+                    {{!-- Number of Cubic Yards to Mulch: {{orderoptions3_id }}   
+                    {{!-- {{/if}} 
+                    {{!-- {{#if orderoptions4_id}} 
+                    {{!-- Number of Trees to cut: {{orderoptions4_id }}   
+                    {{!-- {{/if}} 
+                    {{!-- {{#if orderoptions5_id}} 
+                    {{!-- Bug Spraying Visits: {{orderoptions5_id }}   -
+                    {{!-- {{/if}} 
+                    {{!-- {{#if orderoptions6_id}} 
+                    {{!-- Firewood cords quantity: {{orderoptions6_id }}   
+                    {{!-- {{/if}}
+                    {{!-- {{#if orderoptions7_id}}
+                    {{!-- Mulch quantity: {{orderoptions7_id}}{{!-- Cubic Yards --}}
+                    {{!-- {{!-- {{/if}}</td>  --}}
+                {{!-- </tr> --}}
+                {{!-- {{/each}}
+            {{!-- </tbody> --}}
+        {{!-- </table> --}}
+    {{!-- </div>
+    <button id="createNewOrder" type="button" class="fs-4 py-2 px-3 text-light bg-primary rounded fixed-bottom w-25 mx-auto mb-2">Create New Order</button>
+    <script src="/js/createNewOrder.js"></script>
+ </body>
+ --}}
