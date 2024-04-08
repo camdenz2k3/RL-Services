@@ -27,50 +27,50 @@ router.get("/product", async (req, res) => {
   }
 });
 
-router.get("/service", async (req, res) => {
-  try {
+// router.get("/service", async (req, res) => {
+//   try {
 
-  res.render("service", {
-    logged_in: req.session.logged_in,
-  });
-} catch (err) {
-  res.status(500).json(err);
-}
-});
+//   res.render("service", {
+//     logged_in: req.session.logged_in,
+//   });
+// } catch (err) {
+//   res.status(500).json(err);
+// }
+// });
 
-router.get("/createorder", async (req, res) => {
-  try {
-    let user = await User.findOne({
-      where: {
-        id: req.session.user_id
-      }
-    })
-    user = user.get({ plain: true })
+// router.get("/createorder", async (req, res) => {
+//   try {
+//     let user = await User.findOne({
+//       where: {
+//         id: req.session.user_id
+//       }
+//     })
+//     user = user.get({ plain: true })
 
-    res.render("createorder", {
-      user,
-      logged_in: req.session.logged_in,
-    })
-  } catch (err) {
-    res.status(500).json(err)
-  }
-});
+//     res.render("createorder", {
+//       user,
+//       logged_in: req.session.logged_in,
+//     })
+//   } catch (err) {
+//     res.status(500).json(err)
+//   }
+// });
 
-router.get("/vieworders", async (req, res) => {
-  try {
-    let orders = await orderInfo.findAll({
-      include: User
-    })
-    orders = orders.map(orderinfo => orderinfo.get({ plain: true }))
+// router.get("/vieworders", async (req, res) => {
+//   try {
+//     let orders = await orderInfo.findAll({
+//       include: User
+//     })
+//     orders = orders.map(orderinfo => orderinfo.get({ plain: true }))
     
-  res.render("vieworders", {
-    orders,
-    logged_in: req.session.logged_in,
-  });
-} catch (err) {
-  res.status(500).json(err);
-}
-});
+//   res.render("vieworders", {
+//     orders,
+//     logged_in: req.session.logged_in,
+//   });
+// } catch (err) {
+//   res.status(500).json(err);
+// }
+// });
 
 // router.get('/orderinfo/:id', async (req, res) => {
 //   try {
@@ -92,13 +92,13 @@ router.get("/vieworders", async (req, res) => {
 //   }
 // })
 
-router.get('/login', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/');
-    return;
-  }
+// router.get('/login', (req, res) => {
+//   if (req.session.logged_in) {
+//     res.redirect('/');
+//     return;
+//   }
 
-  res.render('login');
-});
+//   res.render('login');
+// });
 
 export default router;
